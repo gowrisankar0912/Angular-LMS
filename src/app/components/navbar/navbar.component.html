@@ -1,0 +1,49 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"
+      ><strong>{{ title }}</strong></a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a *ngIf="isloggedIn()" class="nav-link" routerLink="home" [routerLinkActive]="['active']"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isloggedIn()" class="nav-link" routerLink="userlist" [routerLinkActive]="['active']"
+            >User List</a
+          >
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isloggedIn()"  class="nav-link" [routerLink]="['addbook']" routerLinkActive="active">Add Book</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isloggedIn()" class="nav-link" [routerLink]="['displaybooks']" routerLinkActive="active">Display Books</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isloggedIn()" class="nav-link" [routerLink]="['displayissuedetails']" routerLinkActive="active">Display Issued Details</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isloggedIn()" class="nav-link" [routerLink]="['issuebook']" routerLinkActive="active">Issue Book</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="isloggedIn()" class="nav-link" (click)="logout()"  [routerLink]="['login']">Log out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

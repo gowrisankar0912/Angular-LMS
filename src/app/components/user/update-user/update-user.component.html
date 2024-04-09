@@ -1,0 +1,37 @@
+<div class="container col-md-6 offset-mid-3">
+    <h3 class="text-center"> Edit User </h3>
+    <form (ngSubmit) = "onSubmit()" autocomplete="off">
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> Username </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="username" [(ngModel)] = "user.username" name="username">
+        </div>
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> Name </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="name" [(ngModel)] = "user.name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> Email </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="email" [(ngModel)] = "user.email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> Phone Number </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="phoneNumber" [(ngModel)] = "user.mobileNumber" name="phoneNumber">
+        </div>
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> Gender </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="gender" [(ngModel)] = "user.gender" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> Password </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="password" [(ngModel)] = "user.password  " name="password">
+        </div>
+
+        <button class="btn btn-success" type="submit"> Submit </button>
+    </form>
+</div>

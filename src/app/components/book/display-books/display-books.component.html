@@ -1,0 +1,31 @@
+<h2>Book List</h2>
+<div style="display: inline-block;" class="col-4 offset-9 form-group">
+    <input style="width:16.5rem;" placeholder="Search" type="text" class="form-control"
+        [(ngModel)]='booksearch'>
+</div>
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th> ISBN </th>
+            <th> Name </th> 
+            <th> Author </th>
+            <th> Genre </th>
+            <th> Number of copies available </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books| bookSearch: booksearch">
+            <td> {{ book.isbn }} </td>
+            <td> {{ book.title }} </td>
+            <td> {{ book.author }} </td>
+            <td> {{ book.genre }} </td>
+            <td> {{ book.price }} </td>
+            <td> {{ book.quantityInStock }} </td>
+            <td>
+                <button (click) = "updateBook(book.isbn)" class="btn btn-info"  style="margin-left: 10px"> Edit </button>
+                <button (click) = "deleteBook(book.isbn)" class="btn btn-danger" style="margin-left: 10px"> Delete </button>                
+            </td>
+        </tr>
+    </tbody>
+</table>

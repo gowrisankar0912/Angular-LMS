@@ -1,0 +1,17 @@
+<div class="container col-md-6 offset-mid-3">
+    <h3 class="text-center"> Issue Book </h3>
+    <form (ngSubmit) = "onSubmit()" autocomplete="off">
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> User Id </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="userId" [(ngModel)] = "issueDetails.userId" name="userId">
+        </div>
+
+        <div class="form-group">
+            <label style="margin-bottom: 10px"> Book ISBN </label>
+            <input type="text" class="form-control" style="margin-bottom: 10px" id="isbn" [(ngModel)] = "issueDetails.isbn" name="isbn">
+        </div>
+
+        <button class="btn btn-success" type="submit"> Submit </button>
+    </form>
+</div>

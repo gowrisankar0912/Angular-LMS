@@ -1,0 +1,24 @@
+<h2>Issued details</h2>
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th> Issued ID </th>
+            <th> Used ID </th>
+            <th> Book ISBN </th>
+            <th> User </th>
+            <th> Book </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let issue of issueDetails">
+            <td> {{ issue.issuedId }} </td>
+            <td> {{ issue.userId }} </td>
+            <td> {{ issue.isbn }} </td>
+            <td> {{ issue.user | json }} </td>
+            <td> {{ issue.book | json }} </td>
+            <td>
+                <button (click) = "deleteIssued(issue.issuedId)" class="btn btn-danger" style="margin-left: 10px"> Delete </button>                
+            </td>
+        </tr>
+    </tbody>
+</table>
